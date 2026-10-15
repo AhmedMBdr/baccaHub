@@ -1,0 +1,224 @@
+:root {
+  --auth-background-color: #f6f3eb;
+  --auth-btn-prim: #0b7a63;
+  --auth-input-hover: #0b7a63;
+  --auth-ink: #0b1c19;
+  --auth-muted: #718079;
+  --auth-error: #ff4d4f;
+  --auth-direction: rtl;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+body {
+  height: 100vh;
+  background-color: #0b1c19;
+  display: flex;
+}
+.left {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+  width: 40%;
+  border-right: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head-text {
+  direction: var(--auth-direction);
+  font-size: 4rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.phrase {
+  direction: var(--auth-direction);
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.right {
+  background-color: var(--auth-background-color);
+  width: 60%;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lang {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 1000px;
+}
+.lang span {
+  color: black;
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+form {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 38px 42px;
+  border-radius: 20px;
+  width: min(100%, 430px);
+  min-height: 430px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 18px 45px rgba(11, 28, 25, 0.12);
+}
+.active {
+  background-color: black;
+  color: white !important;
+}
+form > h1 {
+  color: var(--auth-ink);
+  direction: var(--auth-direction);
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+.signup-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  color: #718079;
+  font-size: 0.9rem;
+  direction:var(--auth-direction);
+}
+
+.signup-prompt p {
+  color: inherit;
+}
+
+.signup-prompt a {
+  color: #0b7a63;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-prompt a:hover {
+  color: #096b57;
+  text-decoration: underline;
+}
+form > p {
+  color: var(--auth-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+form > p a {
+  color: var(--auth-btn-prim);
+  font-weight: 700;
+}
+form > p a:hover {
+  color: #096b57;
+  text-decoration: underline;
+}
+label {
+  color: var(--auth-ink);
+  direction: var(--auth-direction);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.login-format {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.login-format > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+input {
+  width: 100%;
+  padding: 13px 14px;
+  color: var(--auth-ink);
+  background-color: var(--auth-background-color);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+input::placeholder {
+  color: var(--auth-muted);
+}
+input:focus {
+  border-color: var(--auth-input-hover);
+}
+form button {
+  width: 100%;
+  min-height: 46px;
+  color: white;
+  background-color: var(--auth-btn-prim);
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+form button:hover {
+  background-color: #096b57;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(11, 122, 99, 0.22);
+}
+label.error {
+  color: var(--auth-error);
+}
+input.error {
+  border-color: var(--auth-error);
+  box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.14);
+}
+.error-message {
+  color: var(--auth-error);
+  font-size: 0.9rem;
+  text-align: center;
+  display: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

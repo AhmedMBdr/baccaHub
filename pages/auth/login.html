@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/login.css">
+        
+</head>
+
+<body>
+    <div class="left">
+        <h1 class="head-text lng" data-lng="welcome1">Welcome back!</h1>
+        <p class="phrase lng" data-lng="welcome2">Let's continue learning! </p>
+    </div>
+    <div class="right">
+        <div class="lang">
+            <span class="en">English</span>
+            <span class="ar">العربية</span>
+        </div>
+        <form>
+            <h1 class="lng" data-lng="welcome1"></h1>
+            <div class="login-format">
+                <div class="Email">
+                    <label class="lng" for="email" data-lng="email"></label>
+                    <input type="email" placeholder="name@example.com" id="email" required>
+                    <div class="error-message"></div>
+                </div>
+                <div class="password">
+                    <label class="lng" for="password" data-lng="password"></label>
+                    <input type="password" placeholder="Password" id="password" required>
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <button type="submit" class="lng" data-lng="login"></button>
+            <div class="signup-prompt">
+                <p class="lng" data-lng="signupPhrase"></p>
+                <a href="signup.html" class="lng" data-lng="signup"></a>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="module" src="../../js/auth/authLogin.js"></script>
+
+</html>

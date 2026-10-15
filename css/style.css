@@ -17,9 +17,12 @@ html,
 body {
   height: 100vh;
 }
+body , a , .prim-btn{
+  color: var(--primary-text-color);
+
+}
 body {
   background: var(--primary-color);
-  color: var(--primary-text-color);
 }
 /* header*/
 * {
@@ -30,7 +33,6 @@ body {
 }
 a {
   text-decoration: none;
-  color: var(--primary-text-color);
 }
 header,
 .wrap,
@@ -51,10 +53,11 @@ header,
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1000px;
 }
-.ar {
-  background-color: var(--secondary-text-color);
-  color: black;
+.active , .sec-btn{
+    background-color: var(--secondary-text-color);
+    color: black;
 }
+
 .lang span {
   padding: 0.4rem 0.9rem;
   border-radius: 100px;
@@ -81,14 +84,10 @@ button {
   cursor: pointer;
 }
 .prim-btn {
-  color: var(--primary-text-color);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.sec-btn {
-  color: black;
-  background-color: var(--secondary-text-color);
-}
+
 header {
   position: sticky;
   top: 0;

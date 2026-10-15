@@ -20,12 +20,12 @@
             </div>
             <div class="head-buttons">
                 <div class="lang">
-                    <span class="ar">العربية</span>
+                    <span class="ar active">العربية</span>
                     <span class="en">English</span>
                 </div>
                 <div class="auth">
-                    <button class="log-in prim-btn">تسجيل الدخول</button>
-                    <button class="sign-up sec-btn">ابدأ الآن</button>
+                    <button class="log-in prim-btn lng" data-lng="login">تسجيل الدخول</button>
+                    <button class="sign-up sec-btn lng" data-lng="signup1">ابدأ الآن</button>
                 </div>
             </div>
         </div>
@@ -33,16 +33,16 @@
     <div class="body primary-color">
         <div class="wrap">
             <div class="left">
-                <p class="first">بايثون للمرحله الثانوية</p>
+                <p class="first lng" data-lng="firstPara">بايثون للمرحله الثانوية</p>
                 <h1>
-                    <span class="text-head"><span class="nb">افهم.</span> <span class="nb">طبّق.</span>
-                        <span style="display:block;">واعرف خطوتك التالية.</span></span>
+                    <span class="text-head lng"><span class="lng" data-lng="header1">افهم.</span> <span class="lng" data-lng="header2">طبّق.</span>
+                        <span style="display:block;" class="lng" data-lng="header3">واعرف خطوتك التالية.</span></span>
                 </h1>
-                <p class="explanation">يساعدك BaccaHub على تعلّم Python بالعربية أو الإنجليزية، وتطبيق ما تتعلّمه،
+                <p class="explanation lng" data-lng="explanation">يساعدك BaccaHub على تعلّم Python بالعربية أو الإنجليزية، وتطبيق ما تتعلّمه，
                     واختبار فهمك، وتحويل أخطائك إلى خطة مذاكرة واضحة.</p>
                 <div class="body-buttons">
-                    <button class="log-in prim-btn">تسجيل الدخول</button>
-                    <button class="sign-up sec-btn">أنشئ حسابًا</button>
+                    <button class="log-in prim-btn lng" data-lng="login">تسجيل الدخول</button>
+                    <button class="sign-up sec-btn lng" data-lng="signup2">أنشئ حسابًا</button>
                 </div>
 
             </div>
@@ -67,5 +67,6 @@
 
     </footer>
 </body>
+<script type="module" src="js/index/index.js"></script>
 
 </html>

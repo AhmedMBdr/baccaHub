@@ -6,7 +6,7 @@ const lang = {
       firstPara: "Python for High School",
       header1: "Understand.",
       header2: "Apply.",
-      header3: "now your next step.",
+      header3: "Know your next step.",
       explanation:
         "BaccaHub helps you learn Python in Arabic or English, put what you learn into practice, test your understanding, and turn your mistakes into a clear study plan.",
   },

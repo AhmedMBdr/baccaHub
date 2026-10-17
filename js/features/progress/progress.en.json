@@ -1,0 +1,15 @@
+{
+  "progress_title": "My Progress",
+  "progress_empty": "No progress data available yet. Take a quiz to get started!",
+  "progress_completed": "Completed",
+  "progress_quizzes_taken": "Quizzes Taken",
+  "progress_last_reviewed": "Last Reviewed",
+  "progress_view_history": "View Attempt History",
+  "progress_modal_title": "Topic Details",
+  "progress_current_mastery": "Current Mastery Score",
+  "progress_attempt_trend": "Attempt Trend",
+  "progress_attempt": "Attempt",
+  "progress_never": "Never",
+  "mastery_not_assessed": "Not assessed",
+  "mastery_score": "{0}% Mastery"
+}

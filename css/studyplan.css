@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body,
+a,
+.prim-btn {
+  color: var(--primary-text-color);
+}
+
+body {
+  background: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+.wrap,
+.head-buttons,
+.auth,
+.body,
+.lang {
+  display: flex;
+  flex-direction: var(--flex-direction);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: fit-content;
+}
+
+.lang {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1000px;
+}
+
+.active,
+.sec-btn {
+  background-color: var(--secondary-text-color);
+  color: black;
+}
+
+.lang span {
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.auth {
+  height: fit-content;
+  font-weight: bold;
+  gap: 10px;
+}
+
+button {
+  font-size: 1rem;
+  height: 2.5rem;
+  padding-inline: 1rem;
+  border-radius: 15px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.prim-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wrap {
+  width: 72rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-buttons {
+  gap: 20px;
+  align-items: center;
+}
+
+.lang > span {
+  padding: 10px;
+}
+
+.body {
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+  padding: 20px;
+  gap: 50px;
+  height: 85vh;
+  justify-content: space-around;
+  align-items: center;
+}

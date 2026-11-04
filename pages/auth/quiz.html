@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BaccaCode | Quiz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/quiz.css" />
+</head>
+<body class="quiz-page">
+
+  <!-- ===== Header (keep identical to studyplan.html / index.html) ===== -->
+  <header class="header">
+    <a class="logo" href="../index.html">BaccaCode</a>
+
+    <div class="header-actions">
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
+        <span data-lang="ar" class="active" role="button" tabindex="0">عربي</span>
+        <span data-lang="en" role="button" tabindex="0">English</span>
+      </div>
+      <a class="prim-btn" id="logoutBtn" href="../index.html"
+         data-ar="تسجيل الخروج" data-en="Log out">تسجيل الخروج</a>
+    </div>
+  </header>
+
+  <main class="quiz-main">
+
+    <!-- ===== Quiz header ===== -->
+    <section class="quiz-head" id="quizHead">
+      <div>
+        <p class="quiz-topic" id="quizTopic"></p>
+        <h1 class="quiz-title" id="quizTitle"></h1>
+      </div>
+      <div class="quiz-timer" id="quizTimer" role="timer" aria-live="off">
+        <span class="timer-label" data-ar="الوقت المتبقي" data-en="Time left">الوقت المتبقي</span>
+        <strong class="timer-value" id="timerValue">00:00</strong>
+      </div>
+    </section>
+
+    <!-- ===== Quiz view ===== -->
+    <section class="quiz-card" id="quizView">
+      <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+      <p class="question-count" id="questionCount"></p>
+
+      <h2 class="question-text" id="questionText"></h2>
+      <div class="options" id="options" role="radiogroup" aria-labelledby="questionText"></div>
+
+      <nav class="quiz-nav">
+        <button class="prim-btn ghost" id="prevBtn" type="button"
+                data-ar="السابق" data-en="Previous">السابق</button>
+        <button class="prim-btn" id="nextBtn" type="button"
+                data-ar="التالي" data-en="Next">التالي</button>
+        <button class="prim-btn submit" id="submitBtn" type="button"
+                data-ar="إنهاء الاختبار" data-en="Submit quiz" hidden>إنهاء الاختبار</button>
+      </nav>
+
+      <ol class="q-dots" id="qDots" aria-label="Questions"></ol>
+    </section>
+
+    <!-- ===== Result view ===== -->
+    <section class="quiz-card result" id="resultView" hidden>
+      <div class="score-ring" id="scoreRing">
+        <div class="score-inner">
+          <strong id="scorePercent">0%</strong>
+          <span id="scoreFraction"></span>
+        </div>
+      </div>
+      <h2 class="result-status" id="resultStatus"></h2>
+      <p class="result-note" id="resultNote"></p>
+
+      <div class="result-actions">
+        <button class="prim-btn" id="retryBtn" type="button"
+                data-ar="أعد المحاولة" data-en="Try again">أعد المحاولة</button>
+        <a class="prim-btn ghost" href="../index.html"
+           data-ar="العودة للرئيسية" data-en="Back to home">العودة للرئيسية</a>
+      </div>
+
+      <h3 class="review-title" data-ar="مراجعة الإجابات" data-en="Review answers">مراجعة الإجابات</h3>
+      <ul class="review" id="reviewList"></ul>
+    </section>
+  </main>
+
+  <!-- ===== Confirm submit dialog ===== -->
+  <dialog class="confirm" id="confirmDialog">
+    <p id="confirmText"></p>
+    <div class="confirm-actions">
+      <button class="prim-btn ghost" id="confirmNo" type="button"
+              data-ar="متابعة الحل" data-en="Keep going">متابعة الحل</button>
+      <button class="prim-btn" id="confirmYes" type="button"
+              data-ar="إنهاء الآن" data-en="Submit now">إنهاء الآن</button>
+    </div>
+  </dialog>
+
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

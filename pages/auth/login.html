@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/login.css">
         
 </head>
 
-<body>
+<body class="auth-page">
     <div class="left">
+        <a class="auth-logo" href="../../Index.html" aria-label="BaccaHub home">Bacca<span>Hub</span></a>
         <h1 class="head-text lng" data-lng="welcome1">Welcome back!</h1>
         <p class="phrase lng" data-lng="welcome2">Let's continue learning! </p>
     </div>
@@ -29,12 +30,12 @@
             <div class="login-format">
                 <div class="Email">
                     <label class="lng" for="email" data-lng="email"></label>
-                    <input type="email" placeholder="name@example.com" id="email" required>
+                    <input type="email" placeholder="name@example.com" id="email" autocomplete="email" required>
                     <div class="error-message"></div>
                 </div>
                 <div class="password">
                     <label class="lng" for="password" data-lng="password"></label>
-                    <input type="password" placeholder="Password" id="password" required>
+                    <input type="password" placeholder="Password" id="password" autocomplete="current-password" required>
                     <div class="error-message"></div>
                 </div>
             </div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../css/panel.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/app.css">
+  <title>Profile</title>
+</head>
+
+<body class="panel app-page page-pattern">
+  <header>
+    <div class="wrap">
+      <a class="logo" href="../../Index.html" aria-label="BaccaHub home">Bacca<span>Hub</span></a>
+      <div class="head-buttons">
+        <button class="mobile-menu lng" data-lng="openMenu" type="button" aria-controls="profile-navigation" aria-expanded="false">Open menu</button>
+        <div class="lang"><span class="en">English</span><span class="ar">العربية</span></div><button class="btn lng"
+          data-lng="logout" id="logout" type="button"></button>
+      </div>
+    </div>
+  </header>
+  <div class="app-shell">
+    <aside class="app-sidebar" id="profile-navigation">
+      <div class="sidebar-label lng" data-lng="navigation">Learning menu</div>
+      <nav class="app-nav" aria-label="Learning menu">
+        <a href="../dashboard.html"><span class="nav-icon">01</span><span class="lng" data-lng="dashboard">Dashboard</span></a>
+        <a href="../topics.html"><span class="nav-icon">02</span><span class="lng" data-lng="topics">Topics</span></a>
+        <a href="../progress.html"><span class="nav-icon">03</span><span class="lng" data-lng="progress">My progress</span></a>
+        <a href="../mistakes.html"><span class="nav-icon">04</span><span class="lng" data-lng="mistakes">My mistakes</span></a>
+        <a href="../studyplan.html"><span class="nav-icon">05</span><span class="lng" data-lng="plan">Study plan</span></a>
+        <a href="profile.html" aria-current="page"><span class="nav-icon">06</span><span class="lng" data-lng="profile">Profile</span></a>
+      </nav>
+    </aside>
+    <main class="app-content">
+      <div class="content-width">
+        <div class="page">
+          <div>
+            <h1 class="lng" data-lng="profile"></h1>
+          </div>
+          <div class="grid2">
+            <section class="card" aria-labelledby="acc">
+              <h2 id="acc" class="lng" data-lng="account"></h2>
+              <div id="account">
+                <div class="skel"></div>
+              </div>
+            </section>
+            <section class="card" aria-labelledby="cf">
+              <h2 id="cf" class="lng" data-lng="cfTitle"></h2>
+              <div id="codeforces">
+                <div class="skel"></div>
+              </div>
+            </section>
+          </div>
+          <section class="card">
+            <h2 class="lng" data-lng="stats"></h2>
+            <p class="lead lng" data-lng="statsTxt"></p>
+            <div><a href="../quiz-history.html" class="lng" data-lng="openStats"></a></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="../../js/profile/profile.js"></script>
+</body>
+
+</html>

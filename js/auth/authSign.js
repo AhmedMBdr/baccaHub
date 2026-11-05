@@ -1,7 +1,6 @@
 import { validation, checkLang  } from "./function.js";
-const lang =
-  localStorage.getItem("selectedLang") ||
-  localStorage.setItem("selectedLang", "ar");
+const lang = localStorage.getItem("selectedLang") || "ar";
+if (!localStorage.getItem("selectedLang")) localStorage.setItem("selectedLang", lang);
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const ar = document.querySelector(".ar");
 const en = document.querySelector(".en");
@@ -36,8 +35,9 @@ form.addEventListener("submit", (e) => {
     const email = emailInput.value;
     const password = passwordInput.value;
     const name = nameInput.value;
-    if( validation(nameInput, name.length >= 3, errorMessages[lang].name) && validation(emailInput, emailRegex.test(email), errorMessages[lang].email) && validation(passwordInput, password.length >= 6, errorMessages[lang].password)){
-        e.target.submit();
+    const currentLang = localStorage.getItem("selectedLang") || "ar";
+    if( validation(nameInput, name.length >= 3, errorMessages[currentLang].name) && validation(emailInput, emailRegex.test(email), errorMessages[currentLang].email) && validation(passwordInput, password.length >= 6, errorMessages[currentLang].password)){
+        window.location.href = "../dashboard.html";
     }
    ;
 });

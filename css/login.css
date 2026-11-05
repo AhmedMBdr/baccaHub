@@ -1,37 +1,43 @@
 :root {
-  --auth-background-color: #f6f3eb;
-  --auth-btn-prim: #0b7a63;
-  --auth-input-hover: #0b7a63;
-  --auth-ink: #0b1c19;
-  --auth-muted: #718079;
+  --auth-background-color: #edf4f0;
+  --auth-btn-prim: #117a68;
+  --auth-input-hover: #117a68;
+  --auth-ink: #0d2924;
+  --auth-muted: #627872;
   --auth-error: #ff4d4f;
   --auth-direction: rtl;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: white;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-}
-body {
-  height: 100vh;
+body.auth-page {
+  min-height: 100vh;
   background-color: #0b1c19;
   display: flex;
 }
 .left {
+  position: relative;
+  background-color: var(--primary-color);
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 32px 32px;
-  width: 40%;
-  border-right: 1px solid var(--border-color);
+    linear-gradient(rgba(190, 226, 216, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190, 226, 216, 0.055) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  flex: 0 1 42%;
+  border-inline-end: 1px solid var(--border-color);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.auth-logo {
+  position: absolute;
+  top: 1.25rem;
+  inset-inline-start: 1.25rem;
+  color: var(--primary-text-color);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.auth-logo span { color: var(--secondary-text-color); }
+.auth-logo:hover { color: var(--primary-text-color); }
 .head-text {
   direction: var(--auth-direction);
   font-size: 4rem;
@@ -49,7 +55,7 @@ body {
 }
 .right {
   background-color: var(--auth-background-color);
-  width: 60%;
+  flex: 1 1 58%;
   padding: 24px;
   position: relative;
   display: flex;
@@ -60,7 +66,7 @@ body {
 .lang {
   position: absolute;
   top: 24px;
-  right: 24px;
+  inset-inline-end: 24px;
   display: flex;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -216,6 +222,14 @@ input.error {
   0% {
     opacity: 0;
     transform: translateY(-50px);
+  }
+
+  @media (max-width: 760px) {
+    body.auth-page { display: block; }
+    .left { min-height: 28vh; width: 100%; padding: 2rem 1.25rem 1rem; border-inline-end: 0; border-bottom: 1px solid var(--border-color); }
+    .head-text { font-size: clamp(2.2rem, 10vw, 3.5rem); text-align: center; }
+    .right { width: 100%; min-height: 72vh; padding: 4.5rem 1rem 2rem; }
+    form { padding: 2rem 1.4rem; }
   }
   100% {
     opacity: 1;

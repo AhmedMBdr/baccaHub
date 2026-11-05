@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../css/panel.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>Codeforces list demo</title>
+</head>
+
+<body class="panel">
+  <header>
+    <div class="wrap">
+      <div class="logo"><a href="../../Index.html">BaccaHub</a></div>
+      <div class="head-buttons">
+        <div class="lang"><span class="en">English</span><span class="ar">العربية</span></div><button class="btn lng"
+          data-lng="logout" id="logout" type="button"></button>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <h1 class="lng" data-lng="practice"></h1>
+    <section class="card" id="host"></section>
+  </main>
+  <script type="module">
+    import { renderCodeforcesList } from "../../js/codeforces/codeforcesList.js";
+    import { initLang } from "../../js/panel/core.js";
+    const draw = () => renderCodeforcesList(document.getElementById("host"), 5);
+    initLang(draw); draw();
+  </script>
+</body>
+
+</html>

@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>Create an account | BaccaHub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/login.css">
 
 </head>
 
-<body>
+<body class="auth-page">
     <div class="left">
+        <a class="auth-logo" href="../../Index.html" aria-label="BaccaHub home">Bacca<span>Hub</span></a>
         <h1 class="head-text lng" data-lng="greeting1"></h1>
         <p class="phrase lng" data-lng="greeting2"></p>
     </div>
@@ -29,21 +30,21 @@
             <div class="login-format">
                 <div class="name">
                     <label class="lng" for="name" data-lng="name"></label>
-                    <input type="text" placeholder="Name" id="name" required>
+                    <input type="text" placeholder="Name" id="name" autocomplete="name" required>
                     <div class="error-message"></div>
                 </div>
                 <div class="Email">
                     <label class="lng" for="email" data-lng="email"></label>
-                    <input type="email" placeholder="name@example.com" id="email" required>
+                    <input type="email" placeholder="name@example.com" id="email" autocomplete="email" required>
                     <div class="error-message"></div>
                 </div>
                 <div class="password">
                     <label class="lng" for="password" data-lng="password"></label>
-                    <input type="password" placeholder="Password" id="password" required>
+                    <input type="password" placeholder="Password" id="password" autocomplete="new-password" required>
                     <div class="error-message"></div>
                 </div>
             </div>
-            <button type="submit" class="lng" data-lng="login"></button>
+            <button type="submit" class="lng" data-lng="signup"></button>
             <div class="signup-prompt">
                 <p class="lng" data-lng="loginPhrase"></p>
                 <a href="login.html" class="lng" data-lng="login"></a>

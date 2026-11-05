@@ -1,71 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BaccaHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="BaccaHub helps secondary-school students learn Python, practise with Codeforces, and turn mistakes into a clear study plan.">
+    <title>BaccaHub | Learn Python with direction</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <header class="primary-color">
+    <header class="site-header">
         <div class="wrap">
-            <div class="logo">
-                <a href="#start">BaccaHub</a>
-            </div>
+            <a class="logo" href="Index.html" aria-label="BaccaHub home">Bacca<span>Hub</span></a>
             <div class="head-buttons">
-                <div class="lang">
-                    <span class="ar">العربية</span>
-                    <span class="en">English</span>
+                <div class="lang" role="group" aria-label="Language">
+                    <span class="en" role="button" tabindex="0">English</span>
+                    <span class="ar" role="button" tabindex="0">العربية</span>
                 </div>
-                <div class="auth">
-                    <button class="log-in prim-btn lng" data-lng="login"></button>
-                    <button class="sign-up sec-btn lng" data-lng="signup1"></button>
-                </div>
+                <nav class="auth" aria-label="Account">
+                    <a class="prim-btn lng" data-lng="login" href="pages/auth/login.html"></a>
+                    <a class="sec-btn lng" data-lng="signup1" href="pages/auth/signup.html"></a>
+                </nav>
             </div>
         </div>
     </header>
-    <div class="body primary-color">
+
+    <main>
+        <section class="hero page-pattern" aria-labelledby="hero-title">
+            <div class="wrap">
+                <div class="hero-copy">
+                    <p class="eyebrow lng" data-lng="firstPara"></p>
+                    <h1 id="hero-title">
+                        <span class="lng" data-lng="header1"></span>
+                        <span class="highlight lng" data-lng="header2"></span>
+                        <span class="lng" data-lng="header3"></span>
+                    </h1>
+                    <p class="hero-description lng" data-lng="explanation"></p>
+                    <div class="hero-actions">
+                        <a class="sec-btn lng" data-lng="signup2" href="pages/auth/signup.html"></a>
+                        <a class="prim-btn lng" data-lng="explore" href="pages/studyplan.html"></a>
+                    </div>
+                    <div class="hero-proof" aria-label="Platform benefits">
+                        <span><strong>01</strong><span class="lng" data-lng="benefit1"></span></span>
+                        <span><strong>02</strong><span class="lng" data-lng="benefit2"></span></span>
+                        <span><strong>03</strong><span class="lng" data-lng="benefit3"></span></span>
+                    </div>
+                </div>
+
+                <div class="code-window" aria-label="Python learning preview">
+                    <img class="python-mark" src="images/py.svg" alt="" aria-hidden="true">
+                    <div class="code-window-header">
+                        <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+                        <span class="code-window-title">first_step.py</span>
+                    </div>
+                    <pre><code><span class="code-comment"># your next step is clearer here</span>
+<span class="code-keyword">topic</span> = <span class="code-string">"Loops"</span>
+<span class="code-keyword">mastery</span> = <span class="code-function">0.42</span>
+
+<span class="code-keyword">if</span> mastery &lt; <span class="code-function">0.60</span>:
+    <span class="code-function">study</span>(topic)
+    <span class="code-function">practise</span>(topic)
+<span class="code-keyword">else</span>:
+    <span class="code-function">take_next_step</span>()</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap value-grid" aria-label="BaccaHub learning loop">
+            <article class="value-card">
+                <span class="value-number">01 /</span>
+                <h2 class="lng" data-lng="value1Title"></h2>
+                <p class="lng" data-lng="value1Text"></p>
+            </article>
+            <article class="value-card">
+                <span class="value-number">02 /</span>
+                <h2 class="lng" data-lng="value2Title"></h2>
+                <p class="lng" data-lng="value2Text"></p>
+            </article>
+            <article class="value-card">
+                <span class="value-number">03 /</span>
+                <h2 class="lng" data-lng="value3Title"></h2>
+                <p class="lng" data-lng="value3Text"></p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="wrap">
-            <div class="left">
-                <p class="first lng" data-lng="firstPara"></p>
-                <h1>
-                    <span class="text-head lng"><span class="lng" data-lng="header1"></span> <span class="lng" data-lng="header2"></span>
-                        <span style="display:block;" class="lng" data-lng="header3"></span></span>
-                </h1>
-                <p class="explanation lng" data-lng="explanation"></p>
-                <div class="body-buttons">
-                    <button class="log-in prim-btn lng" data-lng="login"></button>
-                    <button class="sign-up sec-btn lng" data-lng="signup2"></button>
-                </div>
-
-            </div>
-            <div class="right-wrap">
-                <img src="images/py.svg" alt="Python" class="python-logo">
-                <div class="right">
-                    <div class="head-code">Greetings.py</div>
-                    <pre class="body-code">
-                <code>
-        <span class="func">if</span> <span class="func">!</span>firstTime:
-                <span class="print">print</span><span class="parameters">(</span><span class="string">"Welcome Back!"</span><span class="parameters">)</span>
-        <span class="func">else</span>:
-                <span class="print">print</span><span class="parameters">(</span><span class="string">"Hello, Stranger!"</span><span class="parameters">)</span>
-                </code>
-            </pre>
-                </div>
-                <div class="how-it-works"></div>
-            </div>
+            <span>BaccaHub</span>
+            <span class="lng" data-lng="footer"></span>
         </div>
-    </div>
-    <footer class="primary-color">
-
     </footer>
+    <script type="module" src="js/index/index.js"></script>
 </body>
-<script type="module" src="js/index/index.js"></script>
+
 </html>

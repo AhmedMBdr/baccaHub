@@ -1,124 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-}
-
-html,
-body {
-  height: 100vh;
-}
-
-body,
-a,
-.prim-btn {
-  color: var(--primary-text-color);
-}
-
-body {
-  background: var(--primary-color);
-}
-
-a {
-  text-decoration: none;
-}
-
-header,
-.wrap,
-.head-buttons,
-.auth,
-.body,
-.lang {
-  display: flex;
-  flex-direction: var(--flex-direction);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  height: fit-content;
-}
-
-.lang {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1000px;
-}
-
-.active,
-.sec-btn {
-  background-color: var(--secondary-text-color);
-  color: black;
-}
-
-.lang span {
-  padding: 0.4rem 0.9rem;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  user-select: none;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
-.auth {
-  height: fit-content;
-  font-weight: bold;
-  gap: 10px;
-}
-
-button {
-  font-size: 1rem;
-  height: 2.5rem;
-  padding-inline: 1rem;
-  border-radius: 15px;
-  border-style: none;
-  cursor: pointer;
-}
-
-.prim-btn {
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  justify-content: center;
-  align-items: center;
-  height: 7vh;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.wrap {
-  width: 72rem;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.head-buttons {
-  gap: 20px;
-  align-items: center;
-}
-
-.lang > span {
-  padding: 10px;
-}
-
-.body {
-  width: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 32px 32px;
-  padding: 20px;
-  gap: 50px;
-  height: 85vh;
-  justify-content: space-around;
-  align-items: center;
-}
+.plan-page { padding: clamp(3rem, 7vw, 6rem) 0; }
+.plan-intro { max-width: 46rem; direction: var(--direction); }
+.eyebrow { margin: 0 0 0.75rem; color: var(--secondary-text-color); font-weight: 700; }
+.plan-intro h1 { margin: 0; font-size: clamp(2.2rem, 5vw, 4rem); letter-spacing: -0.05em; line-height: 1.1; }
+.lead { max-width: 40rem; margin: 1rem 0 0; color: var(--muted-text-color); font-size: 1.1rem; }
+.plan-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.7fr); gap: 1.5rem; margin-top: 3rem; }
+.plan-list { display: grid; gap: 1rem; }
+.plan-step, .plan-summary { border: 1px solid var(--border-color); border-radius: var(--radius-md); background: rgba(255,255,255,0.04); }
+.plan-step { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1rem; padding: 1.4rem; }
+.plan-step.current { border-color: rgba(244,183,64,0.65); background: linear-gradient(110deg, rgba(244,183,64,0.11), rgba(255,255,255,0.035)); }
+.step-index { color: var(--accent-color); font: 700 1.15rem "IBM Plex Mono", monospace; }
+.current .step-index { color: var(--secondary-text-color); }
+.step-status { color: var(--muted-text-color); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; }
+.plan-step h2 { margin: 0.35rem 0; font-size: 1.25rem; }
+.plan-step p { max-width: 38rem; margin: 0 0 1rem; color: var(--muted-text-color); }
+.plan-step .prim-btn, .plan-step .sec-btn { min-height: 2.4rem; font-size: 0.9rem; }
+.plan-summary { align-self: start; padding: 1.5rem; direction: var(--direction); }
+.summary-icon { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; margin-bottom: 1.5rem; border-radius: 0.7rem; color: #101914; background: var(--secondary-text-color); font-size: 1.5rem; }
+.plan-summary h2 { margin: 0.25rem 0 0.5rem; font-size: 1.35rem; }
+.plan-summary > p:not(.eyebrow) { margin: 0; color: var(--muted-text-color); }
+.mastery { margin-top: 2rem; }
+.mastery > div:first-child { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted-text-color); font-size: 0.9rem; }
+.mastery strong { color: var(--secondary-text-color); font: 700 1.1rem "IBM Plex Mono", monospace; }
+.mastery-bar { height: 0.55rem; margin-top: 0.6rem; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,0.12); }
+.mastery-bar span { display: block; width: 42%; height: 100%; border-radius: inherit; background: var(--secondary-text-color); }
+.plan-link { display: inline-block; margin-top: 1.5rem; color: var(--accent-color); font-weight: 700; }
+@media (max-width: 760px) { .plan-layout { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .plan-step { grid-template-columns: 2.5rem 1fr; padding: 1rem; } }

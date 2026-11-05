@@ -1,35 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Plan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study plan | BaccaHub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/studyplan.css">
 </head>
-<body>
-    <header class="primary-color">
+
+<body class="app-page page-pattern">
+    <header class="site-header">
         <div class="wrap">
-            <div class="logo">
-                <a href="#start">BaccaHub</a>
-            </div>
+            <a class="logo" href="../Index.html">Bacca<span>Hub</span></a>
             <div class="head-buttons">
-                <div class="lang">
-                    <span class="ar active">العربية</span>
-                    <span class="en">English</span>
+                <button class="mobile-menu lng" data-lng="openMenu" type="button" aria-controls="studyplan-navigation" aria-expanded="false">Open menu</button>
+                <div class="lang" role="group" aria-label="Language">
+                    <span class="en" role="button" tabindex="0">English</span>
+                    <span class="ar" role="button" tabindex="0">العربية</span>
                 </div>
-                <div class="auth">
-                    <button class="log-out prim-btn lng" data-lng="logout">تسجيل الخروج</button>
-                </div>
+                <a class="prim-btn lng" data-lng="logout" href="../Index.html"></a>
             </div>
         </div>
     </header>
-    <div class="body primary-color">
 
+    <div class="app-shell">
+        <aside class="app-sidebar" id="studyplan-navigation">
+            <div class="sidebar-label lng" data-lng="navigation">Learning menu</div>
+            <nav class="app-nav" aria-label="Learning menu">
+                <a href="dashboard.html"><span class="nav-icon">01</span><span class="lng" data-lng="dashboard">Dashboard</span></a>
+                <a href="topics.html"><span class="nav-icon">02</span><span class="lng" data-lng="topics">Topics</span></a>
+                <a href="progress.html"><span class="nav-icon">03</span><span class="lng" data-lng="progress">My progress</span></a>
+                <a href="mistakes.html"><span class="nav-icon">04</span><span class="lng" data-lng="mistakes">My mistakes</span></a>
+                <a href="studyplan.html" aria-current="page"><span class="nav-icon">05</span><span class="lng" data-lng="plan">Study plan</span></a>
+                <a href="profile/profile.html"><span class="nav-icon">06</span><span class="lng" data-lng="profile">Profile</span></a>
+            </nav>
+        </aside>
+        <main class="app-content">
+          <div class="content-width plan-page">
+            <section class="plan-intro" aria-labelledby="plan-title">
+                <p class="eyebrow lng" data-lng="eyebrow"></p>
+                <h1 id="plan-title" class="lng" data-lng="title"></h1>
+                <p class="lead lng" data-lng="intro"></p>
+            </section>
+
+            <section class="plan-layout" aria-label="Recommended study steps">
+                <div class="plan-list">
+                    <article class="plan-step current">
+                        <div class="step-index">01</div>
+                        <div>
+                            <span class="step-status lng" data-lng="now"></span>
+                            <h2 class="lng" data-lng="step1Title"></h2>
+                            <p class="lng" data-lng="step1Text"></p>
+                            <a class="sec-btn lng" data-lng="review" href="topic.html?id=4"></a>
+                        </div>
+                    </article>
+                    <article class="plan-step">
+                        <div class="step-index">02</div>
+                        <div>
+                            <span class="step-status lng" data-lng="next"></span>
+                            <h2 class="lng" data-lng="step2Title"></h2>
+                            <p class="lng" data-lng="step2Text"></p>
+                            <a class="prim-btn lng" data-lng="practice" href="codeforces/demo.html"></a>
+                        </div>
+                    </article>
+                    <article class="plan-step">
+                        <div class="step-index">03</div>
+                        <div>
+                            <span class="step-status lng" data-lng="after"></span>
+                            <h2 class="lng" data-lng="step3Title"></h2>
+                            <p class="lng" data-lng="step3Text"></p>
+                            <a class="prim-btn lng" data-lng="quiz" href="quiz.html"></a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="plan-summary">
+                    <div class="summary-icon" aria-hidden="true">→</div>
+                    <p class="eyebrow lng" data-lng="whyEyebrow"></p>
+                    <h2 class="lng" data-lng="whyTitle"></h2>
+                    <p class="lng" data-lng="whyText"></p>
+                    <div class="mastery">
+                        <div><span class="lng" data-lng="mastery"></span><strong>42%</strong></div>
+                        <div class="mastery-bar" role="progressbar" aria-label="Current mastery" aria-valuenow="42"
+                            aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                    </div>
+                    <a class="plan-link lng" data-lng="dashboard" href="profile/profile.html"></a>
+                </aside>
+            </section>
+          </div>
+        </main>
     </div>
+
+    <footer class="site-footer">
+        <div class="wrap"><span>BaccaHub</span><span class="lng" data-lng="footer"></span></div>
+    </footer>
+    <script type="module" src="../js/studyplan.js"></script>
 </body>
+
 </html>

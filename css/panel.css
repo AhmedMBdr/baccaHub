@@ -1,0 +1,441 @@
+/* Member 6 pages. Uses the variables from css/style.css. Page rules are scoped to body.panel so the Codeforces list can be embedded elsewhere. */
+body.panel {
+    min-height: 100vh;
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
+}
+
+.panel * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-sans)
+}
+
+.panel :where(code, pre, kbd, samp) {
+    font-family: var(--font-mono)
+}
+
+.panel a {
+    color: var(--secondary-text-color);
+    text-decoration: none
+}
+
+.panel a:hover {
+    text-decoration: underline
+}
+
+.panel header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    height: 64px;
+    background: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center
+}
+
+.panel .wrap {
+    width: min(72rem, 100% - 2rem);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.panel .logo {
+    color: var(--primary-text-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.03em
+}
+
+.panel .logo span {
+    color: var(--secondary-text-color)
+}
+
+.panel .logo:hover {
+    color: var(--primary-text-color)
+}
+
+.panel .head-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center
+}
+
+.panel .lang {
+    display: flex;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 1000px
+}
+
+.panel .lang span {
+    padding: .4rem .9rem;
+    border-radius: 100px;
+    font-size: .875rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .3s, color .3s
+}
+
+.panel .lang .active,
+.panel .btn.sec {
+    background: var(--secondary-text-color);
+    color: #000
+}
+
+main.page {
+    width: min(72rem, 100% - 2rem);
+    margin: 32px auto 64px;
+    display: grid;
+    gap: 24px
+}
+
+main.page h1 {
+    font-size: 2rem;
+    color: var(--secondary-text-color)
+}
+
+.lead {
+    color: rgba(255, 255, 255, .6)
+}
+
+.card {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    display: grid;
+    gap: 16px
+}
+
+.card h2 {
+    font-size: 1.15rem
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    align-items: start
+}
+
+.panel label {
+    font-size: .9rem;
+    font-weight: 600;
+    display: grid;
+    gap: 6px
+}
+
+.panel input,
+.panel select {
+    width: 100%;
+    padding: 12px 14px;
+    color: var(--primary-text-color);
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none
+}
+
+.panel input:focus,
+.panel select:focus {
+    border-color: var(--secondary-text-color)
+}
+
+.panel input[readonly] {
+    opacity: .6
+}
+
+.panel-form {
+    display: grid;
+    gap: 14px
+}
+
+.admin-toolbar {
+    justify-content: space-between
+}
+
+.inline-check {
+    display: flex !important;
+    align-items: center;
+    gap: 8px
+}
+
+.inline-check input {
+    width: auto
+}
+
+.progress-compact {
+    height: 10px
+}
+
+.progress-compact .progress-bar {
+    width: calc(var(--progress, 0) * 1%);
+}
+
+.mistakes-scroll {
+    max-height: 250px;
+    overflow-y: auto
+}
+
+.mistake-question {
+    max-width: 80%
+}
+
+.panel select option {
+    color: #000
+}
+
+.panel input.error {
+    border-color: var(--func-color)
+}
+
+.fld-err {
+    color: var(--func-color);
+    font-size: .85rem;
+    min-height: 1em;
+    font-weight: 400
+}
+
+.btn {
+    font-size: 1rem;
+    height: 2.5rem;
+    padding-inline: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background: transparent;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    font-weight: 600
+}
+
+.btn:hover {
+    border-color: var(--secondary-text-color)
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: wait
+}
+
+.btn.danger {
+    color: var(--func-color);
+    border-color: var(--func-color)
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.chip {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-size: .78rem;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, .06);
+    color: #a8bdb5
+}
+
+.chip.role {
+    color: var(--print-color)
+}
+
+.chip.rate {
+    color: var(--parameters-color)
+}
+
+.chip.off {
+    color: var(--func-color)
+}
+
+.dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 20px;
+    font-size: .95rem
+}
+
+.dl dt {
+    color: rgba(255, 255, 255, .6)
+}
+
+.banner {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--func-color);
+    color: var(--func-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center
+}
+
+.empty {
+    color: rgba(255, 255, 255, .6);
+    padding: 16px 0
+}
+
+.skel {
+    height: 56px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .06);
+    animation: pulse 1.2s ease-in-out infinite
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .4
+    }
+}
+
+.toast {
+    position: fixed;
+    inset-block-end: 24px;
+    inset-inline-start: 24px;
+    z-index: 50;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #17483d;
+    border: 1px solid #0b7a63;
+    color: #fff
+}
+
+.toast.err {
+    background: #3a1b1b;
+    border-color: var(--func-color)
+}
+
+.cf-list {
+    list-style: none;
+    display: grid;
+    gap: 10px
+}
+
+.cf-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .03)
+}
+
+.cf-item a {
+    font-weight: 600
+}
+
+.cf-meta {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 6px
+}
+
+.cf-tick {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid #4a5d58;
+    flex: none;
+    display: grid;
+    place-items: center;
+    font-size: .8rem
+}
+
+.cf-tick.solved {
+    background: #0b7a63;
+    border-color: #0b7a63;
+    color: #fff
+}
+
+.cf-hint {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .6)
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap
+}
+
+.tabs button {
+    height: 2.5rem;
+    padding-inline: 12px;
+    background: none;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    color: rgba(255, 255, 255, .6);
+    font-weight: 600;
+    cursor: pointer
+}
+
+.tabs button[aria-selected=true] {
+    color: var(--secondary-text-color);
+    border-color: var(--secondary-text-color)
+}
+
+.tbl-wrap {
+    overflow-x: auto
+}
+
+.panel table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .92rem
+}
+
+.panel th,
+.panel td {
+    text-align: start;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top
+}
+
+.panel th {
+    color: rgba(255, 255, 255, .6);
+    font-weight: 500
+}
+
+.panel dialog {
+    margin: auto;
+    width: min(480px, 100% - 2rem);
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    background: #1a4a40;
+    color: var(--primary-text-color)
+}
+
+.panel dialog::backdrop {
+    background: rgba(0, 0, 0, .6)
+}
+
+.panel dialog form {
+    display: grid;
+    gap: 14px
+}
+
+.panel :focus-visible {
+    outline: 2px solid var(--secondary-text-color);
+    outline-offset: 2px
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .skel {
+        animation: none
+    }
+}

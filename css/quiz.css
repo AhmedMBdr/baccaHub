@@ -10,14 +10,9 @@
 .quiz-page {
   margin: 0;
   min-height: 100vh;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: var(--font-sans);
   color: var(--primary-text-color);
   background-color: var(--primary-color);
-  /* Grid pattern — if style.css already sets this on body, delete this block */
-  background-image:
-    linear-gradient(var(--border-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-  background-size: 40px 40px;
 }
 
 /* ---------- Header (fallback; style.css wins if it defines these) ---------- */

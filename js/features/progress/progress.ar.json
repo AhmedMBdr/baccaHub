@@ -1,0 +1,15 @@
+{
+  "progress_title": "مستوى تقدمي",
+  "progress_empty": "لا توجد بيانات للتقدم حتى الآن. ابدأ بحل اختبار!",
+  "progress_completed": "مكتمل",
+  "progress_quizzes_taken": "الاختبارات المجراة",
+  "progress_last_reviewed": "آخر مراجعة",
+  "progress_view_history": "عرض سجل المحاولات",
+  "progress_modal_title": "تفاصيل الموضوع",
+  "progress_current_mastery": "نسبة الإتقان الحالية",
+  "progress_attempt_trend": "مسار المحاولات",
+  "progress_attempt": "محاولة",
+  "progress_never": "أبداً",
+  "mastery_not_assessed": "لم يتم التقييم",
+  "mastery_score": "إتقان {0}%"
+}

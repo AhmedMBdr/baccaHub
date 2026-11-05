@@ -12,16 +12,13 @@ function importLan(language) {
     });
 }
 export function checkLang(lang, otherLang, direction, flexDirection) {
-  if (!lang.classList.contains("active")) {
-    lang.classList.add("active");
-    otherLang.classList.remove("active");
-    document.documentElement.style.setProperty("--direction", direction);
-    document.documentElement.style.setProperty(
-      "--flex-direction",
-      flexDirection,
-    );
-    const string = direction === "rtl" ? "ar" : "en";
-    importLan(string);
-    localStorage.setItem("selectedLang", string);
-  }
+  lang.classList.add("active");
+  otherLang.classList.remove("active");
+  const string = direction === "rtl" ? "ar" : "en";
+  document.documentElement.lang = string;
+  document.documentElement.dir = direction;
+  document.documentElement.style.setProperty("--direction", direction);
+  document.documentElement.style.setProperty("--flex-direction", flexDirection);
+  importLan(string);
+  localStorage.setItem("selectedLang", string);
 }

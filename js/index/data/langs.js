@@ -9,6 +9,17 @@ const lang = {
       header3: "Know your next step.",
       explanation:
         "BaccaHub helps you learn Python in Arabic or English, put what you learn into practice, test your understanding, and turn your mistakes into a clear study plan.",
+      explore: "See the study plan",
+      benefit1: "Curriculum-led",
+      benefit2: "Practice-ready",
+      benefit3: "Personalized",
+      value1Title: "Understand the concept",
+      value1Text: "Short lessons and Python examples keep the curriculum focused.",
+      value2Title: "Apply what you learn",
+      value2Text: "Work through guided problems and curated Codeforces practice.",
+      value3Title: "Know what comes next",
+      value3Text: "Quiz results and mistakes become a practical next action.",
+      footer: "Learn one concept. Apply it. Improve with direction.",
   },
   ar: {
     login: "تسجيل الدخول",
@@ -20,6 +31,17 @@ const lang = {
       header3: "واعرف خطوتك التالية.",
       explanation:
         "يساعدك BaccaHub على تعلّم Python بالعربية أو الإنجليزية، وتطبيق ما تتعلّمه، واختبار فهمك، وتحويل أخطائك إلى خطة مذاكرة واضحة.",
+      explore: "شاهد خطة المذاكرة",
+      benefit1: "منهج واضح",
+      benefit2: "تدريب عملي",
+      benefit3: "خطة شخصية",
+      value1Title: "افهم الفكرة",
+      value1Text: "دروس مختصرة وأمثلة Python تحافظ على تركيز المنهج.",
+      value2Title: "طبّق ما تعلمته",
+      value2Text: "حل مسائل موجهة وتدرب على مسائل مختارة من Codeforces.",
+      value3Title: "اعرف خطوتك التالية",
+      value3Text: "تحوّل نتائج الاختبارات والأخطاء إلى إجراء عملي واضح.",
+      footer: "تعلّم فكرة. طبّقها. وتقدّم بخطوات واضحة.",
   },
 };
 export default lang;
